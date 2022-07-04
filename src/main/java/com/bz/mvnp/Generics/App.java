@@ -19,5 +19,17 @@ public class App {
 		else
 			return c;
 	}
+	
+	public String maxString(String a, String b, String c) {
+		Integer aLen = a.length();
+		Integer bLen = b.length();
+		Integer cLen = c.length();
+		if (aLen.compareTo(bLen) > 0 && aLen.compareTo(cLen) > 0)
+			return a;
+		if (bLen.compareTo(aLen) > 0 && bLen.compareTo(cLen) > 0)
+			return b;
+		else
+			return c;
+	}
 
 }
