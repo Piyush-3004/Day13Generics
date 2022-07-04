@@ -6,17 +6,17 @@ import org.junit.Test;
 
 public class AppTest {
 
-	Integer num1 = new Integer(10);
-	Integer num2 = new Integer(20);
-	Integer num3 = new Integer(30);
-	Integer num4 = new Integer(40);
+	static Integer num1 = new Integer(10);
+	static Integer num2 = new Integer(20);
+	static Integer num3 = new Integer(30);
+	static Integer num4 = new Integer(40);
 
 	static App test;
 
 	@BeforeClass
 	public static void init() {
 
-		test = new App();
+		test = new App(num1, num2, num3, num4);
 	}
 
 	@Test
