@@ -1,35 +1,17 @@
 package com.bz.mvnp.Generics;
 
 public class App {
+	
+	
+	public <T extends Comparable<T>> T findMax(T element1,T element2,T element3){
+		if(element1.compareTo(element2) >0 && element1.compareTo(element3)>0) 
+			return element1;
+			else if(element2.compareTo(element1) >0 && element2.compareTo(element3)>0)
+			return element2;
+			else 
+				return element3;
+	}
+	
 
-	public int maxNum(Integer a, Integer b, Integer c) {
-		if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
-			return a;
-		else if (b.compareTo(a) > 0 && b.compareTo(c) > 0)
-			return b;
-		else
-			return c;
-	}
-	
-	public float maxFloat(Float a, Float b, Float c) {
-		if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
-			return a;
-		else if (b.compareTo(a) > 0 && b.compareTo(c) > 0)
-			return b;
-		else
-			return c;
-	}
-	
-	public String maxString(String a, String b, String c) {
-		Integer aLen = a.length();
-		Integer bLen = b.length();
-		Integer cLen = c.length();
-		if (aLen.compareTo(bLen) > 0 && aLen.compareTo(cLen) > 0)
-			return a;
-		if (bLen.compareTo(aLen) > 0 && bLen.compareTo(cLen) > 0)
-			return b;
-		else
-			return c;
-	}
 
 }
